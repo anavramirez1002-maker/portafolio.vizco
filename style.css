@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Fondos */
+#bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: background-image 0.4s ease;
+}
+
+.bg-bliss {
+  background-image: url('assets/bg-bliss.jpg'); /* Reemplaza con tu imagen de fondo verde */
+}
+
+.bg-water {
+  background-image: url('assets/bg-water.jpg'); /* Reemplaza con tu imagen de fondo de agua */
+}
+
+/* Barra superior */
+.top-nav {
+  position: fixed;
+  top: 15px;
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 8px 25px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.nav-btn {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.nav-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-btn:hover {
+  transform: scale(1.15);
+}
+
+/* Ventanas */
+.window {
+  width: 80%;
+  max-width: 750px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.window-header {
+  background: linear-gradient(180deg, #e3effd 0%, #b8d4f8 100%);
+  padding: 8px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #a0c0e8;
+}
+
+.window-title {
+  font-weight: bold;
+  color: #1e395b;
+}
+
+.window-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.win-btn {
+  border: 1px solid #707070;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.win-btn.close:hover {
+  background: #ff5f56;
+  color: white;
+}
+
+.window-body {
+  padding: 25px;
+  min-height: 300px;
+}
+
+/* Carpetas y galerías */
+.folder-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.folder-card:hover {
+  transform: scale(1.08);
+}
+
+.folder-card img {
+  width: 70px;
+  height: 70px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
