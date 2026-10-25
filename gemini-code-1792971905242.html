@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio Retro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fondo dinámico -->
+  <div id="bg-overlay" class="bg-bliss"></div>
+
+  <!-- Barra de navegación superior -->
+  <nav class="top-nav">
+    <div class="nav-btn active" onclick="switchTab('home', 'bg-bliss')">
+      <img src="assets/home-icon.png" alt="Home">
+    </div>
+    <div class="nav-btn" onclick="switchTab('user', 'bg-bliss')">
+      <img src="assets/user-icon.png" alt="User">
+    </div>
+    <div class="nav-btn" onclick="switchTab('folders', 'bg-bliss')">
+      <img src="assets/folder-icon.png" alt="Folders">
+    </div>
+  </nav>
+
+  <!-- Ventana: HOME -->
+  <main id="tab-home" class="window active-window">
+    <div class="window-header">
+      <span class="window-title">My Portfolio</span>
+      <div class="window-controls">
+        <button class="win-btn">—</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
+      </div>
+    </div>
+    <div class="window-body center-text">
+      <h1>My Portfolio</h1>
+      <p>Bienvenido a mi espacio creativo.</p>
+    </div>
+  </main>
+
+  <!-- Ventana: SOBRE MÍ (USER) -->
+  <main id="tab-user" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Portfolio - About Me</span>
+      <div class="window-controls">
+        <button class="win-btn">—</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <h2>Hola, soy [Tu Nombre]</h2>
+      <p>Soy ilustradora y diseñadora digital enfocada en crear contenido visual único.</p>
+    </div>
+  </main>
+
+  <!-- Ventana: CARPETAS / SECCIONES -->
+  <main id="tab-folders" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Explorer</span>
+      <div class="window-controls">
+        <button class="win-btn">—</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
+      </div>
+    </div>
+    <div class="window-body folder-grid">
+      <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
+        <img src="assets/folder-green.png" alt="Folder">
+        <span>Illustrations</span>
+      </div>
+      <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
+        <img src="assets/folder-blue.png" alt="Folder">
+        <span>3D Model</span>
+      </div>
+      <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
+        <img src="assets/folder-yellow.png" alt="Folder">
+        <span>Logo Design</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Galería: ILUSTRACIONES -->
+  <main id="gal-illustrations" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Gallery - Illustrations</span>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+    </div>
+    <div class="window-body gallery-grid">
+      <!-- Agrega aquí tus imágenes de ilustraciones -->
+      <img src="assets/ilustracion1.jpg" alt="Ilustración 1">
+      <img src="assets/ilustracion2.jpg" alt="Ilustración 2">
+    </div>
+  </main>
+
+  <!-- Galería: MODELADO 3D -->
+  <main id="gal-3d" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Gallery - 3D Models</span>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+    </div>
+    <div class="window-body gallery-grid">
+      <img src="assets/3d-1.jpg" alt="Modelo 3D 1">
+    </div>
+  </main>
+
+  <!-- Galería: LOGOS -->
+  <main id="gal-logos" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Gallery - Logo Design</span>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+    </div>
+    <div class="window-body gallery-grid">
+      <img src="assets/logo1.png" alt="Logo 1">
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
