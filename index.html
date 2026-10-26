@@ -3,31 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio Retro</title>
+  <title>Ana Victoria Rmż - Portafolio</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  <!-- Fondo dinámico (usa fondo 1.webp por defecto) -->
+  <!-- Fondo dinámico -->
   <div id="bg-overlay" class="bg-bliss"></div>
 
   <!-- Barra de navegación superior -->
   <nav class="top-nav">
-    <div class="nav-btn active" onclick="switchTab('home', 'bg-bliss')">
+    <div class="nav-btn active" onclick="switchTab('home', 'fondo 1.webp')">
       <img src="./home.webp" alt="Home">
     </div>
-    <div class="nav-btn" onclick="switchTab('user', 'bg-bliss')">
+    <div class="nav-btn" onclick="switchTab('user', 'fondo 1.webp')">
       <img src="./user.webp" alt="User">
     </div>
-    <div class="nav-btn" onclick="switchTab('folders', 'bg-bliss')">
+    <div class="nav-btn" onclick="switchTab('folders', 'fondo 1.webp')">
       <img src="./image.webp" alt="Folders">
     </div>
   </nav>
 
+  <!-- Botón inferior izquierdo para regresar al menú de carpetas -->
+  <div class="back-home-icon" onclick="switchTab('folders', 'fondo 1.webp')" title="Volver a carpetas">
+    <img src="./image.webp" alt="Menu">
+  </div>
+
   <!-- Ventana: HOME -->
   <main id="tab-home" class="window active-window">
     <div class="window-header">
-      <span class="window-title">My Portfolio</span>
+      <span class="window-title">untitled - Paint</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
@@ -35,31 +40,39 @@
       </div>
     </div>
     <div class="window-body center-text">
-      <h1>My Portfolio</h1>
-      <p>Bienvenido a mi espacio creativo.</p>
+      <h3 style="font-family: monospace; margin-bottom: 10px;">Welcome</h3>
+      <h1 style="font-size: 3rem; font-family: monospace;">My Portfolio</h1>
+      <p style="font-family: monospace; margin-top: 15px; font-weight: bold;">Ana V. Rmż</p>
     </div>
   </main>
 
   <!-- Ventana: SOBRE MÍ (USER) -->
   <main id="tab-user" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Portfolio - About Me</span>
+      <span class="window-title">Portfolio & About me</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
         <button class="win-btn close">✕</button>
       </div>
     </div>
-    <div class="window-body">
-      <h2>Hola, soy Ana Ramírez</h2>
-      <p>Soy ilustradora y diseñadora digital enfocada en crear contenido visual único.</p>
+    <div class="window-body two-columns">
+      <div class="col-text">
+        <h2>Portfolio</h2>
+        <p>Durante la carrera desarrollé habilidades de gestión creativa para proyectos de diseño, ejemplos: pósters publicitarios, motion graphics, desarrollo de marcas y logotipos, ilustración editorial, modelado y texturizado en 3D.</p>
+      </div>
+      <div class="col-text" style="border-left: 2px dashed #a0c0e8; padding-left: 20px;">
+        <h2>About me</h2>
+        <p>Mi nombre es Ana Victoria Ramírez Gómez, tengo 20 años. Me gradué del TSU en Diseño Digital.</p>
+        <p style="margin-top: 15px; font-size: 0.9rem;">Me he especializado en Adobe Photoshop, Illustrator, InDesign, After Effects, Autodesk Sketchbook, Affinity y Blender.</p>
+      </div>
     </div>
   </main>
 
-  <!-- Ventana: CARPETAS / SECCIONES -->
+  <!-- Ventana: CARPETAS / SECCIONES PRINCIPALES -->
   <main id="tab-folders" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Explorer</span>
+      <span class="window-title">Explorer - Secciones</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
@@ -67,56 +80,77 @@
       </div>
     </div>
     <div class="window-body folder-grid">
-      <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
-        <img src="./image (1).webp" alt="Folder">
+      <div class="folder-card" onclick="openGallery('illustrations', 'fondo 2.webp')">
+        <img src="./image (1).webp" alt="Illustrations">
         <span>Illustrations</span>
       </div>
-      <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
-        <img src="./image (2).webp" alt="Folder">
+      <div class="folder-card" onclick="openGallery('3d', 'fondo 2.webp')">
+        <img src="./image (2).webp" alt="3D Model">
         <span>3D Model</span>
       </div>
-      <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
-        <img src="./image (3).webp" alt="Folder">
+      <div class="folder-card" onclick="openGallery('logos', 'fondo 2.webp')">
+        <img src="./image (3).webp" alt="Logo Design">
         <span>Logo Design</span>
       </div>
     </div>
   </main>
 
-  <!-- Galería: ILUSTRACIONES -->
+  <!-- Galería: ILUSTRACIONES (Carrusel Horizontal Automático) -->
   <main id="gal-illustrations" class="window hidden">
     <div class="window-header">
       <span class="window-title">Gallery - Illustrations</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+      <button class="back-btn" onclick="switchTab('folders', 'fondo 1.webp')">← Volver</button>
     </div>
-    <div class="window-body gallery-grid">
-      <img src="./Artboard 1.webp" alt="Ilustración 1">
-      <img src="./Artboard 4.webp" alt="Ilustración 2">
-      <img src="./Artboard 6.webp" alt="Ilustración 3">
-      <img src="./flutershy design.webp" alt="Ilustración 4">
+    <div class="window-body carousel-container">
+      <div class="carousel-track">
+        <img src="./Artboard 1.webp" alt="Ilustración">
+        <img src="./Artboard 4.webp" alt="Ilustración">
+        <img src="./Artboard 6.webp" alt="Ilustración">
+        <img src="./Artboard 7.webp" alt="Ilustración">
+        <img src="./flutershy design.webp" alt="Ilustración">
+        <img src="./pinkie redesign.webp" alt="Ilustración">
+        <!-- Duplicadas para efecto infinito fluido -->
+        <img src="./Artboard 1.webp" alt="Ilustración">
+        <img src="./Artboard 4.webp" alt="Ilustración">
+        <img src="./Artboard 6.webp" alt="Ilustración">
+      </div>
     </div>
   </main>
 
-  <!-- Galería: MODELADO 3D -->
+  <!-- Galería: MODELADO 3D (Carrusel Horizontal Automático) -->
   <main id="gal-3d" class="window hidden">
     <div class="window-header">
       <span class="window-title">Gallery - 3D Models</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+      <button class="back-btn" onclick="switchTab('folders', 'fondo 1.webp')">← Volver</button>
     </div>
-    <div class="window-body gallery-grid">
-      <img src="./cal zackk dat.webp" alt="Modelo 3D 1">
-      <img src="./foquita.webp" alt="Modelo 3D 2">
+    <div class="window-body carousel-container">
+      <div class="carousel-track">
+        <img src="./cal zackk dat.webp" alt="3D">
+        <img src="./foquita.webp" alt="3D">
+        <img src="./gold fish.webp" alt="3D">
+        <img src="./tiburon ballena.webp" alt="3D">
+        <!-- Duplicadas -->
+        <img src="./cal zackk dat.webp" alt="3D">
+        <img src="./foquita.webp" alt="3D">
+      </div>
     </div>
   </main>
 
-  <!-- Galería: LOGOS -->
+  <!-- Galería: LOGOS (Carrusel Horizontal Automático) -->
   <main id="gal-logos" class="window hidden">
     <div class="window-header">
       <span class="window-title">Gallery - Logo Design</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+      <button class="back-btn" onclick="switchTab('folders', 'fondo 1.webp')">← Volver</button>
     </div>
-    <div class="window-body gallery-grid">
-      <img src="./Logo Principal.webp" alt="Logo 1">
-      <img src="./Agencia de viajes.webp" alt="Logo 2">
+    <div class="window-body carousel-container">
+      <div class="carousel-track">
+        <img src="./Logo Principal.webp" alt="Logo">
+        <img src="./Agencia de viajes.webp" alt="Logo">
+        <img src="./poet_final.webp" alt="Logo">
+        <!-- Duplicadas -->
+        <img src="./Logo Principal.webp" alt="Logo">
+        <img src="./Agencia de viajes.webp" alt="Logo">
+      </div>
     </div>
   </main>
 
