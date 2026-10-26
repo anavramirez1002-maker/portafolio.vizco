@@ -8,25 +8,25 @@
 </head>
 <body>
 
-  <!-- Fondo dinámico -->
+  <!-- Fondo dinámico inicial -->
   <div id="bg-overlay" class="bg-bliss"></div>
 
   <!-- Barra de navegación superior -->
   <nav class="top-nav">
-    <div class="nav-btn active" onclick="switchTab('home', 'fondo 1.webp')">
+    <div class="nav-btn active" onclick="switchTab('home', 'bg-bliss')">
       <img src="./home.webp" alt="Home">
     </div>
-    <div class="nav-btn" onclick="switchTab('user', 'fondo 1.webp')">
+    <div class="nav-btn" onclick="switchTab('user', 'bg-bliss')">
       <img src="./user.webp" alt="User">
     </div>
-    <div class="nav-btn" onclick="switchTab('folders', 'fondo 1.webp')">
-      <img src="./image (3).webp" alt="Folders">
+    <div class="nav-btn" onclick="switchTab('folders', 'bg-bliss')">
+      <img src="./image 5 (3).webp" alt="Folders">
     </div>
   </nav>
 
   <!-- Botón inferior izquierdo para regresar al menú de carpetas -->
-  <div class="back-home-icon" onclick="switchTab('folders', 'fondo 1.webp')" title="Volver a carpetas">
-    <img src="./image.webp" alt="Menu">
+  <div class="back-home-icon" onclick="switchTab('folders', 'bg-bliss')" title="Volver a carpetas">
+    <img src="./your blood cover page.webp" alt="Menu">
   </div>
 
   <!-- Ventana: HOME -->
@@ -80,15 +80,15 @@
       </div>
     </div>
     <div class="window-body folder-grid">
-      <div class="folder-card" onclick="openGallery('illustrations', 'fondo 2.webp')">
+      <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
         <img src="./image 5 (1).webp" alt="Illustrations">
         <span>Illustrations</span>
       </div>
-      <div class="folder-card" onclick="openGallery('3d', 'fondo 2.webp')">
+      <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
         <img src="./image 5 (2).webp" alt="3D Model">
         <span>3D Model</span>
       </div>
-      <div class="folder-card" onclick="openGallery('logos', 'fondo 2.webp')">
+      <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
         <img src="./image 5 (3).webp" alt="Logo Design">
         <span>Logo Design</span>
       </div>
@@ -99,7 +99,7 @@
   <main id="gal-illustrations" class="window hidden">
     <div class="window-header">
       <span class="window-title">Gallery - Illustrations</span>
-      <button class="back-btn" onclick="switchTab('folders', 'fondo 1.webp')">← Volver</button>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
     </div>
     <div class="window-body carousel-container">
       <div class="carousel-track">
@@ -114,7 +114,7 @@
         <img src="./your blood cover page.webp" alt="Ilustración">
         <img src="./ruiii.webp" alt="Ilustración">
         <img src="./ranita.webp" alt="Ilustración">
-        <!-- Duplicadas para carrusel infinito fluido -->
+        <!-- Duplicadas para carrusel infinito -->
         <img src="./Artboard 1.webp" alt="Ilustración">
         <img src="./Artboard 4.webp" alt="Ilustración">
         <img src="./Artboard 6.webp" alt="Ilustración">
@@ -126,7 +126,7 @@
   <main id="gal-3d" class="window hidden">
     <div class="window-header">
       <span class="window-title">Gallery - 3D Models</span>
-      <button class="back-btn" onclick="switchTab('folders', 'fondo 1.webp')">← Volver</button>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
     </div>
     <div class="window-body carousel-container">
       <div class="carousel-track">
@@ -146,7 +146,7 @@
   <main id="gal-logos" class="window hidden">
     <div class="window-header">
       <span class="window-title">Gallery - Logo Design</span>
-      <button class="back-btn" onclick="switchTab('folders', 'fondo 1.webp')">← Volver</button>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
     </div>
     <div class="window-body carousel-container">
       <div class="carousel-track">
