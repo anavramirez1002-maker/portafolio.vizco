@@ -194,7 +194,7 @@ body {
   font-family: 'Orbitron', sans-serif !important;
 }
 
-/* Doodles decorativos más grandes y visibles */
+/* Doodles decorativos grandes */
 .paint-doodles {
   position: absolute;
   width: 100%;
@@ -207,7 +207,7 @@ body {
 
 .doodle {
   position: absolute;
-  font-size: 3.2rem; /* Tamaño incrementado */
+  font-size: 3.2rem;
   opacity: 0.55;
   animation: floatDoodle 4s ease-in-out infinite alternate;
 }
@@ -257,7 +257,6 @@ body {
   color: #1e395b;
   font-weight: bold;
   font-size: 0.75rem;
-  font-family: 'Orbitron', sans-serif;
   transition: background 0.2s;
 }
 
@@ -307,14 +306,12 @@ body {
   color: #004d40;
   width: fit-content;
   border: 1px solid #26a69a;
-  font-family: 'Orbitron', sans-serif;
 }
 
 .contact-details p {
   font-size: 0.95rem;
   color: #1a237e;
   font-weight: 600;
-  font-family: 'Orbitron', sans-serif;
 }
 
 /* Grid de carpetas */
@@ -352,7 +349,6 @@ body {
 .folder-card span {
   font-weight: bold;
   color: #1e395b;
-  font-family: 'Orbitron', sans-serif;
   font-size: 0.85rem;
 }
 
@@ -397,7 +393,6 @@ body {
   cursor: pointer;
   border-radius: 4px;
   font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
 }
 
 /* Botones PDF */
@@ -415,4 +410,16 @@ body {
 
 .pdf-btn {
   background: #e3effd;
-  border: 1px solid #b
+  border: 1px solid #b8d4f8;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #1e395b;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.pdf-btn:hover {
+  background: #b8d4f8;
+}
