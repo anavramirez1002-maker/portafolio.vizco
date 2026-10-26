@@ -35,7 +35,7 @@ body {
   background-image: url('./fondo 2.webp');
 }
 
-/* Barra superior estelar estilo Figma */
+/* Barra superior */
 .top-nav {
   position: fixed;
   top: 15px;
@@ -70,7 +70,7 @@ body {
   transform: scale(1.15);
 }
 
-/* Ícono inferior izquierdo (Regresar a carpetas) */
+/* Botón inferior izquierdo */
 .back-home-icon {
   position: fixed;
   bottom: 25px;
@@ -93,7 +93,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Ventanas Estilo Retro */
+/* Ventanas */
 .window {
   width: 85%;
   max-width: 800px;
@@ -103,12 +103,6 @@ body {
   box-shadow: 0 15px 35px rgba(0,0,0,0.35);
   overflow: hidden;
   margin-top: 50px;
-  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-@keyframes popIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
 }
 
 .hidden {
@@ -168,7 +162,7 @@ body {
   gap: 20px;
 }
 
-/* Secciones de carpetas */
+/* Carpetas principales */
 .folder-grid {
   display: flex;
   gap: 40px;
@@ -218,7 +212,7 @@ body {
 }
 
 .carousel-track:hover {
-  animation-play-state: paused; /* Pausa al pasar el mouse para apreciar la pieza */
+  animation-play-state: paused;
 }
 
 .carousel-track img {
