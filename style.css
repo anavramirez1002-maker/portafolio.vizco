@@ -35,23 +35,24 @@ body {
   background-image: url('./fondo 2.webp');
 }
 
-/* Barra superior */
+/* Barra superior estelar estilo Figma */
 .top-nav {
   position: fixed;
   top: 15px;
   display: flex;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-  padding: 8px 25px;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  padding: 10px 35px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 100;
 }
 
 .nav-btn {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   transition: transform 0.2s ease;
   display: flex;
@@ -69,16 +70,45 @@ body {
   transform: scale(1.15);
 }
 
-/* Ventanas */
+/* Ícono inferior izquierdo (Regresar a carpetas) */
+.back-home-icon {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.back-home-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.back-home-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Ventanas Estilo Retro */
 .window {
-  width: 80%;
-  max-width: 750px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+  width: 85%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
   border: 2px solid #ffffff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
   overflow: hidden;
-  margin-top: 60px;
+  margin-top: 50px;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 .hidden {
@@ -97,6 +127,7 @@ body {
 .window-title {
   font-weight: bold;
   color: #1e395b;
+  font-size: 14px;
 }
 
 .window-controls {
@@ -119,16 +150,31 @@ body {
 }
 
 .window-body {
-  padding: 25px;
-  min-height: 300px;
+  padding: 30px;
+  min-height: 320px;
 }
 
-/* Carpetas y galerías */
+.center-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Secciones de carpetas */
 .folder-grid {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .folder-card {
@@ -140,30 +186,60 @@ body {
 }
 
 .folder-card:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .folder-card img {
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
+.folder-card span {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #1e395b;
 }
 
-.gallery-grid img {
+/* Carrusel Horizontal Automático */
+.carousel-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
   width: 100%;
+  padding: 10px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollCarousel 25s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused; /* Pausa al pasar el mouse para apreciar la pieza */
+}
+
+.carousel-track img {
+  height: 220px;
+  width: auto;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 2px solid #a0c0e8;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .back-btn {
   background: #f0f0f0;
   border: 1px solid #a0c0e8;
-  padding: 3px 8px;
+  padding: 4px 10px;
   cursor: pointer;
   border-radius: 4px;
+  font-weight: bold;
 }
