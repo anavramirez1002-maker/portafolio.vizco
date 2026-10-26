@@ -5,17 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ana Victoria Rmż - Portafolio</title>
   <link rel="stylesheet" href="./style.css">
-  <!-- Google Fonts para Orbit, Petit Formal Script y Tahoma -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Petit+Formal+Script&family=Tahoma&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Fondo dinámico inicial -->
-  <div id="bg-overlay" class="bg-bliss"></div>
+  <!-- Fondo dinámico inicial con pestaña windows -->
+  <div id="bg-overlay" class="bg-home"></div>
 
   <!-- Barra de navegación superior -->
   <nav class="top-nav">
-    <div class="nav-btn active" onclick="switchTab('home', 'bg-bliss')">
+    <div class="nav-btn active" onclick="switchTab('home', 'bg-home')">
       <img src="./home icon.webp" alt="Home">
     </div>
     <div class="nav-btn" onclick="switchTab('user', 'bg-bliss')">
@@ -29,12 +27,12 @@
     </div>
   </nav>
 
-  <!-- Botón inferior izquierdo para regresar al explorador -->
+  <!-- Botón inferior izquierdo con return_3.webp -->
   <div class="back-home-icon" onclick="switchTab('folders', 'bg-bliss')" title="Volver a carpetas">
-    <img src="./folder icon.webp" alt="Menu">
+    <img src="./return_3.webp" alt="Menu">
   </div>
 
-  <!-- Ventana: HOME (Estilo Paint / WinXP) -->
+  <!-- Ventana: HOME -->
   <main id="tab-home" class="window active-window">
     <div class="window-header">
       <span class="window-title">untitled - Paint</span>
@@ -45,13 +43,13 @@
       </div>
     </div>
     <div class="window-body center-text paint-body">
-      <h3 style="font-family: 'Petit Formal Script', cursive; font-size: 1.8rem; margin-bottom: 10px; color: #333;">Welcome</h3>
-      <h1 style="font-size: 3.5rem; font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color: #111;">My Portfolio</h1>
-      <p style="font-family: 'Tahoma', sans-serif; margin-top: 15px; font-weight: bold; font-size: 1.2rem;">Ana V. Rmż</p>
+      <h3 style="font-size: 2.2rem; margin-bottom: 10px; color: #222;">Welcome</h3>
+      <h1 style="font-size: 3.5rem; letter-spacing: 2px; color: #111;">My Portfolio</h1>
+      <p style="margin-top: 15px; font-weight: bold; font-size: 1.2rem;">Ana V. Rmż</p>
     </div>
   </main>
 
-  <!-- Ventana: SOBRE MÍ / USER (Estilo Notepad WinXP) -->
+  <!-- Ventana: SOBRE MÍ / USER -->
   <main id="tab-user" class="window hidden">
     <div class="window-header">
       <span class="window-title">About_me.txt - Notepad</span>
@@ -69,12 +67,12 @@
       <div class="col-text" style="border-left: 2px dashed #a0c0e8; padding-left: 20px;">
         <h2>About me</h2>
         <p>Mi nombre es Ana Victoria Ramírez Gómez, tengo 20 años. Me gradué del TSU en Diseño Digital.</p>
-        <p style="margin-top: 15px; font-size: 0.9rem;">Me he especializado en Adobe Photoshop, Illustrator, InDesign, After Effects, Autodesk Sketchbook, Affinity y Blender.</p>
+        <p style="margin-top: 15px;">Me he especializado en Adobe Photoshop, Illustrator, InDesign, After Effects, Autodesk Sketchbook, Affinity y Blender.</p>
       </div>
     </div>
   </main>
 
-  <!-- Ventana: CARPETAS / EXPLORADOR (Trabajos) -->
+  <!-- Ventana: CARPETAS / EXPLORADOR (Orden exacto solicitado: 3D Modeling, Illustrations, Logo Design) -->
   <main id="tab-folders" class="window hidden">
     <div class="window-header">
       <span class="window-title">Explorer - Secciones</span>
@@ -85,22 +83,22 @@
       </div>
     </div>
     <div class="window-body folder-grid">
+      <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
+        <div class="folder-icon-svg">📂</div>
+        <span>3D Modeling</span>
+      </div>
       <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
         <div class="folder-icon-svg">📁</div>
         <span>Illustrations</span>
       </div>
-      <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
-        <div class="folder-icon-svg">📂</div>
-        <span>3D Models</span>
-      </div>
       <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
         <div class="folder-icon-svg">🗂️</div>
-        <span>Logos & Brand</span>
+        <span>Logo Design</span>
       </div>
     </div>
   </main>
 
-  <!-- Ventana: CONTACTO (Movida después de los trabajos) -->
+  <!-- Ventana: CONTACTO (Con dos apartados para CVs en PDF) -->
   <main id="tab-contact" class="window hidden">
     <div class="window-header">
       <span class="window-title">Contact & Info</span>
@@ -112,8 +110,11 @@
     </div>
     <div class="window-body contact-body">
       <div class="upload-section">
-        <span style="font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: #333;">Upload text</span>
-        <div class="upload-box"></div>
+        <span style="font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: #333;">Download CVs</span>
+        <div class="cv-buttons-row">
+          <a href="./CV_Ana V. Ramirez Gomez_EN.pdf" target="_blank" class="cv-btn">📄 CV_Ana V. Ramirez Gomez_EN.pdf</a>
+          <a href="./CV_Ana V. Ramirez Gomez_ES.pdf" target="_blank" class="cv-btn">📄 CV_Ana V. Ramirez Gomez_ES.pdf</a>
+        </div>
       </div>
       <div class="contact-card-container">
         <div class="avatar-container">
@@ -131,90 +132,94 @@
     </div>
   </main>
 
-  <!-- Galería: ILUSTRACIONES -->
-  <main id="gal-illustrations" class="window hidden">
-    <div class="window-header">
-      <span class="window-title">Gallery - Illustrations & Editorial</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
-    </div>
-    <div class="window-body carousel-container">
-      <div class="carousel-track">
-        <img src="./ato parttt.webp" alt="Ilustración">
-        <img src="./Atole icono.webp" alt="Ilustración">
-        <img src="./Atole tarjeta.webp" alt="Ilustración">
-        <img src="./flutershy design.webp" alt="Ilustración">
-        <img src="./gold fish.webp" alt="Ilustración">
-        <img src="./ilustracion para cuento.webp" alt="Ilustración">
-        <img src="./pinkie redesign.webp" alt="Ilustración">
-        <img src="./Portada FINAL.webp" alt="Ilustración">
-        <img src="./pose mikuu.webp" alt="Ilustración">
-        <img src="./ranita.webp" alt="Ilustración">
-        <img src="./ruiii.webp" alt="Ilustración">
-        <img src="./twillight completa.webp" alt="Ilustración">
-        <img src="./vita-a-a-amin jiji.webp" alt="Ilustración">
-        <img src="./your blood cover page.webp" alt="Ilustración">
-        <!-- Duplicadas para carrusel infinito -->
-        <img src="./ato parttt.webp" alt="Ilustración">
-        <img src="./Atole icono.webp" alt="Ilustración">
-        <img src="./Atole tarjeta.webp" alt="Ilustración">
-      </div>
-    </div>
-  </main>
-
-  <!-- Galería: MODELADO 3D -->
+  <!-- Galería 1: 3D MODELING (Con los nombres exactos de tus capturas) -->
   <main id="gal-3d" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Gallery - 3D Models & Sculptures</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
+      <span class="window-title">Gallery - 3D Modeling</span>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
     </div>
     <div class="window-body carousel-container">
       <div class="carousel-track">
-        <img src="./cal zackk dat.webp" alt="3D">
         <img src="./Esculpido_CU.webp" alt="3D">
         <img src="./Esculpido_CU_2.webp" alt="3D">
         <img src="./Esculpido_sin textura.webp" alt="3D">
+        <img src="./pose mikuu.webp" alt="3D">
         <img src="./turn around_000.webp" alt="3D">
         <img src="./turn around_006.webp" alt="3D">
         <img src="./turn around_011.webp" alt="3D">
         <img src="./turn around_019.webp" alt="3D">
+        <img src="./cal zackk dat.webp" alt="3D">
+        <img src="./foquita.webp" alt="3D">
+        <img src="./gold fish.webp" alt="3D">
         <img src="./tiburon ballena.webp" alt="3D">
         <img src="./tsukasaaaaa.webp" alt="3D">
-        <img src="./foquita.webp" alt="3D">
-        <!-- Duplicadas -->
-        <img src="./cal zackk dat.webp" alt="3D">
+        <!-- Duplicadas para carrusel infinito -->
         <img src="./Esculpido_CU.webp" alt="3D">
+        <img src="./Esculpido_CU_2.webp" alt="3D">
       </div>
     </div>
   </main>
 
-  <!-- Galería: LOGOS Y DOCUMENTOS PDF -->
+  <!-- Galería 2: ILLUSTRATIONS (Con los nombres exactos) -->
+  <main id="gal-illustrations" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Gallery - Illustrations</span>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+    </div>
+    <div class="window-body carousel-container">
+      <div class="carousel-track">
+        <img src="./ato parttt.webp" alt="Ilustración">
+        <img src="./cal zackk dat.webp" alt="Ilustración">
+        <img src="./flutershy design.webp" alt="Ilustración">
+        <img src="./foquita.webp" alt="Ilustración">
+        <img src="./gold fish.webp" alt="Ilustración">
+        <img src="./ilustracion para cuento.webp" alt="Ilustración">
+        <img src="./pinkie redesign.webp" alt="Ilustración">
+        <img src="./poet_final.webp" alt="Ilustración">
+        <img src="./Portada FINAL.webp" alt="Ilustración">
+        <img src="./ranita.webp" alt="Ilustración">
+        <img src="./Rowmans shirt back 1.webp" alt="Ilustración">
+        <img src="./Rowmanz shirt back 2.webp" alt="Ilustración">
+        <img src="./ruiii.webp" alt="Ilustración">
+        <img src="./shirt design.webp" alt="Ilustración">
+        <img src="./tiburon ballena.webp" alt="Ilustración">
+        <img src="./tsukasaaaaa.webp" alt="Ilustración">
+        <img src="./twillight completa.webp" alt="Ilustración">
+        <img src="./vita-a-a-amin jiji.webp" alt="Ilustración">
+        <img src="./your blood cover page.webp" alt="Ilustración">
+        <!-- Duplicadas -->
+        <img src="./ato parttt.webp" alt="Ilustración">
+        <img src="./flutershy design.webp" alt="Ilustración">
+      </div>
+    </div>
+  </main>
+
+  <!-- Galería 3: LOGO DESIGN Y PDFs (Con los nombres exactos) -->
   <main id="gal-logos" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Gallery - Logos, Apparel & Documents</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
+      <span class="window-title">Gallery - Logo Design</span>
+      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
     </div>
     <div class="window-body">
       <div class="carousel-container" style="margin-bottom: 20px;">
         <div class="carousel-track">
           <img src="./Agencia de viajes.webp" alt="Logo">
+          <img src="./Atole icono.webp" alt="Logo">
+          <img src="./Atole tarjeta.webp" alt="Logo">
           <img src="./Gaby Marketea.webp" alt="Logo">
           <img src="./Logo Principal.webp" alt="Logo">
-          <img src="./poet_final.webp" alt="Logo">
-          <img src="./Rowmans shirt back 1.webp" alt="Apparel">
-          <img src="./Rowmanz shirt back 2.webp" alt="Apparel">
-          <img src="./shirt design.webp" alt="Apparel">
           <!-- Duplicadas -->
           <img src="./Agencia de viajes.webp" alt="Logo">
-          <img src="./Logo Principal.webp" alt="Logo">
+          <img src="./Atole icono.webp" alt="Logo">
         </div>
       </div>
-      <!-- Sección de Documentos PDF -->
+      <!-- Sección de Documentos PDF con nombres exactos -->
       <div class="pdf-links-container">
-        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Documentación Oficial (PDF)</h3>
+        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Documentación Oficial (PDF)[cite: 20]</h3>
         <div class="pdf-buttons">
-          <a href="./Manual corporativo_Ana V. Ramírez Gómez.pdf" target="_blank" class="pdf-btn">Manual corporativo_Ana V. Ramírez Gómez.pdf</a>
-          <a href="./Diseño de imagen_Gaby Marketea.pdf" target="_blank" class="pdf-btn">Diseño de imagen_Gaby Marketea.pdf</a>
-          <a href="./Manual de Identidad_Grupo SIT.pdf" target="_blank" class="pdf-btn">Manual de Identidad_Grupo SIT.pdf</a>
+          <a href="./Manual corporativo_Ana V. Ramírez Gómez.pdf" target="_blank" class="pdf-btn">Manual corporativo_Ana V. Ramírez Gómez.pdf[cite: 20]</a>
+          <a href="./Diseño de imagen_Gaby Marketea.pdf" target="_blank" class="pdf-btn">Diseño de imagen_Gaby Marketea.pdf[cite: 20]</a>
+          <a href="./Manual de Identidad_Grupo SIT.pdf" target="_blank" class="pdf-btn">Manual de Identidad_Grupo SIT.pdf[cite: 20]</a>
         </div>
       </div>
     </div>
