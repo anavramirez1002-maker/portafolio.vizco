@@ -12,7 +12,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Tahoma', sans-serif;
+  font-family: 'Orbitron', sans-serif; /* Orbit para el resto del texto */
 }
 
 body {
@@ -24,7 +24,7 @@ body {
   overflow: hidden;
 }
 
-/* Fondos dinámicos corregidos para garantizar visualización */
+/* Fondos dinámicos */
 #bg-overlay {
   position: fixed;
   top: 0;
@@ -35,10 +35,6 @@ body {
   background-position: center;
   z-index: -1;
   transition: background-image 0.4s ease;
-}
-
-.bg-home {
-  background-image: url('./pestaña windows.webp');
 }
 
 .bg-bliss {
@@ -175,6 +171,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .two-columns {
@@ -183,25 +180,52 @@ body {
   gap: 20px;
 }
 
-/* Tipografías aplicadas */
-.paint-body h3 {
-  font-family: 'Pecita', cursive;
+/* Tipografías específicas pedidas */
+.welcome-pecita {
+  font-family: 'Pecita', cursive !important;
 }
 
-.paint-body h1 {
-  font-family: 'Orbitron', sans-serif;
+.title-tahoma {
+  font-family: 'Tahoma', sans-serif !important;
+  font-weight: bold;
 }
 
 .notepad-body {
-  font-family: 'Tahoma', sans-serif;
   background: #fffffe;
 }
 
-.notepad-body h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #1e395b;
+.notepad-body p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* Doodles decorativos estilo Y2K en Paint */
+.paint-doodles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.doodle {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.4;
+  animation: floatDoodle 4s ease-in-out infinite alternate;
+}
+
+.d1 { top: 15px; left: 30px; transform: rotate(-15deg); }
+.d2 { bottom: 20px; right: 40px; transform: rotate(15deg); }
+.d3 { top: 25px; right: 50px; font-size: 1.2rem; }
+.d4 { bottom: 30px; left: 50px; font-size: 1.2rem; }
+
+@keyframes floatDoodle {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-6px) rotate(5deg); }
 }
 
 /* Pestaña de Contacto y CVs */
@@ -239,7 +263,6 @@ body {
   color: #1e395b;
   font-weight: bold;
   font-size: 0.75rem;
-  font-family: 'Tahoma', sans-serif;
   transition: background 0.2s;
 }
 
@@ -289,14 +312,12 @@ body {
   color: #004d40;
   width: fit-content;
   border: 1px solid #26a69a;
-  font-family: 'Orbitron', sans-serif;
 }
 
 .contact-details p {
   font-size: 0.95rem;
   color: #1a237e;
   font-weight: 600;
-  font-family: 'Tahoma', sans-serif;
 }
 
 /* Grid de carpetas */
@@ -334,7 +355,6 @@ body {
 .folder-card span {
   font-weight: bold;
   color: #1e395b;
-  font-family: 'Orbitron', sans-serif;
   font-size: 0.85rem;
 }
 
@@ -404,7 +424,6 @@ body {
   font-weight: bold;
   font-size: 0.85rem;
   transition: background 0.2s;
-  font-family: 'Tahoma', sans-serif;
 }
 
 .pdf-btn:hover {
