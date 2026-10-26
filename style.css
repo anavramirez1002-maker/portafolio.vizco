@@ -24,7 +24,7 @@ body {
   overflow: hidden;
 }
 
-/* Fondos dinámicos */
+/* Fondos dinámicos corregidos para garantizar visualización */
 #bg-overlay {
   position: fixed;
   top: 0;
