@@ -28,11 +28,11 @@ body {
 }
 
 .bg-bliss {
-  background-image: url('assets/bg-bliss.jpg'); /* Reemplaza con tu imagen de fondo verde */
+  background-image: url('./fondo 1.webp');
 }
 
 .bg-water {
-  background-image: url('assets/bg-water.jpg'); /* Reemplaza con tu imagen de fondo de agua */
+  background-image: url('./fondo 2.webp');
 }
 
 /* Barra superior */
@@ -54,6 +54,9 @@ body {
   height: 45px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-btn img {
@@ -155,4 +158,12 @@ body {
   width: 100%;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+.back-btn {
+  background: #f0f0f0;
+  border: 1px solid #a0c0e8;
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 4px;
 }
