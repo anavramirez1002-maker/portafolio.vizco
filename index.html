@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- Fondo dinámico inicial limpio -->
+  <!-- Fondo dinámico inicial -->
   <div id="bg-overlay" class="bg-bliss"></div>
 
   <!-- Barra de navegación superior -->
@@ -32,10 +32,10 @@
     <img src="./return_3.webp" alt="Menu">
   </div>
 
-  <!-- Ventana: HOME (Con Doodles Y2K y tipografías específicas) -->
+  <!-- Ventana: HOME (Welcome y Ana V. Rmz en Pecita; My Portfolio en Tahoma; Doodles incluidos) -->
   <main id="tab-home" class="window active-window">
     <div class="window-header">
-      <span class="window-title">untitled - Paint</span>
+      <span class="window-title font-orbit">untitled - Paint</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
@@ -50,16 +50,16 @@
         <span class="doodle d3">★</span>
         <span class="doodle d4">☁︎</span>
       </div>
-      <h3 class="welcome-pecita" style="font-size: 2.5rem; margin-bottom: 5px; color: #222;">Welcome</h3>
-      <h1 class="title-tahoma" style="font-size: 3rem; letter-spacing: 1px; color: #111;">My Portfolio</h1>
-      <p class="welcome-pecita" style="margin-top: 15px; font-size: 1.5rem; color: #333;">Ana V. Rmż</p>
+      <h3 class="font-pecita" style="font-size: 2.5rem; margin-bottom: 5px; color: #222;">Welcome</h3>
+      <h1 class="font-tahoma" style="font-size: 3rem; letter-spacing: 1px; color: #111;">My Portfolio</h1>
+      <p class="font-pecita" style="margin-top: 15px; font-size: 1.5rem; color: #333;">Ana V. Rmż</p>
     </div>
   </main>
 
-  <!-- Ventana: SOBRE MÍ / USER -->
+  <!-- Ventana: SOBRE MÍ / USER (Portfolio y About me en Tahoma; resto en Orbit) -->
   <main id="tab-user" class="window hidden">
     <div class="window-header">
-      <span class="window-title">About_me.txt - Notepad</span>
+      <span class="window-title font-orbit">About_me.txt - Notepad</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
@@ -68,13 +68,13 @@
     </div>
     <div class="window-body two-columns notepad-body">
       <div class="col-text">
-        <h2 class="title-tahoma" style="font-size: 1.2rem; margin-bottom: 10px; color: #1e395b;">Portfolio</h2>
-        <p>Durante la carrera desarrollé habilidades de gestión creativa para proyectos de diseño, ejemplos: pósters publicitarios, motion graphics, desarrollo de marcas y logotipos, ilustración editorial, modelado y texturizado en 3D.</p>
+        <h2 class="font-tahoma" style="font-size: 1.1rem; margin-bottom: 10px; color: #1e395b;">Portfolio</h2>
+        <p class="font-orbit" style="font-size: 0.9rem; line-height: 1.5;">Durante la carrera desarrollé habilidades de gestión creativa para proyectos de diseño, ejemplos: pósters publicitarios, motion graphics, desarrollo de marcas y logotipos, ilustración editorial, modelado y texturizado en 3D.</p>
       </div>
       <div class="col-text" style="border-left: 2px dashed #a0c0e8; padding-left: 20px;">
-        <h2 class="title-tahoma" style="font-size: 1.2rem; margin-bottom: 10px; color: #1e395b;">About me</h2>
-        <p>Mi nombre es Ana Victoria Ramírez Gómez, tengo 20 años. Me gradué del TSU en Diseño Digital.</p>
-        <p style="margin-top: 15px;">Me he especializado en Adobe Photoshop, Illustrator, InDesign, After Effects, Autodesk Sketchbook, Affinity y Blender.</p>
+        <h2 class="font-tahoma" style="font-size: 1.1rem; margin-bottom: 10px; color: #1e395b;">About me</h2>
+        <p class="font-orbit" style="font-size: 0.9rem; line-height: 1.5;">Mi nombre es Ana Victoria Ramírez Gómez, tengo 20 años. Me gradué del TSU en Diseño Digital.</p>
+        <p class="font-orbit" style="font-size: 0.9rem; line-height: 1.5; margin-top: 15px;">Me he especializado en Adobe Photoshop, Illustrator, InDesign, After Effects, Autodesk Sketchbook, Affinity y Blender.</p>
       </div>
     </div>
   </main>
@@ -82,7 +82,7 @@
   <!-- Ventana: CARPETAS / EXPLORADOR -->
   <main id="tab-folders" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Explorer - Secciones</span>
+      <span class="window-title font-orbit">Explorer - Secciones</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
@@ -92,15 +92,15 @@
     <div class="window-body folder-grid">
       <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
         <div class="folder-icon-svg">📂</div>
-        <span>3D Modeling</span>
+        <span class="font-orbit">3D Modeling</span>
       </div>
       <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
         <div class="folder-icon-svg">📁</div>
-        <span>Illustrations</span>
+        <span class="font-orbit">Illustrations</span>
       </div>
       <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
         <div class="folder-icon-svg">🗂️</div>
-        <span>Logo Design</span>
+        <span class="font-orbit">Logo Design</span>
       </div>
     </div>
   </main>
@@ -108,7 +108,7 @@
   <!-- Ventana: CONTACTO -->
   <main id="tab-contact" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Contact & Info</span>
+      <span class="window-title font-orbit">Contact & Info</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
@@ -117,10 +117,10 @@
     </div>
     <div class="window-body contact-body">
       <div class="upload-section">
-        <span style="font-size: 0.9rem; color: #333;">Download CVs</span>
+        <span class="font-orbit" style="font-size: 0.9rem; color: #333;">Download CVs</span>
         <div class="cv-buttons-row">
-          <a href="./CV_Ana V. Ramirez Gomez_EN.pdf" target="_blank" class="cv-btn">📄 CV_Ana V. Ramirez Gomez_EN.pdf</a>
-          <a href="./CV_Ana V. Ramirez Gomez_ES.pdf" target="_blank" class="cv-btn">📄 CV_Ana V. Ramirez Gomez_ES.pdf</a>
+          <a href="./CV_Ana V. Ramirez Gomez_EN.pdf" target="_blank" class="cv-btn font-orbit">📄 CV_Ana V. Ramirez Gomez_EN.pdf</a>
+          <a href="./CV_Ana V. Ramirez Gomez_ES.pdf" target="_blank" class="cv-btn font-orbit">📄 CV_Ana V. Ramirez Gomez_ES.pdf</a>
         </div>
       </div>
       <div class="contact-card-container">
@@ -128,11 +128,11 @@
           <img src="./ato parttt.webp" alt="Avatar">
         </div>
         <div class="contact-info-box">
-          <div class="contact-btn-title">Contact me:</div>
+          <div class="contact-btn-title font-orbit">Contact me:</div>
           <div class="contact-details">
-            <p>✉ anavramirez1002@gmail.com</p>
-            <p>✉ atoledechokolate512@gmail.com</p>
-            <p>📞 +52 449 152 5083</p>
+            <p class="font-orbit">✉ anavramirez1002@gmail.com</p>
+            <p class="font-orbit">✉ atoledechokolate512@gmail.com</p>
+            <p class="font-orbit">📞 +52 449 152 5083</p>
           </div>
         </div>
       </div>
@@ -142,8 +142,8 @@
   <!-- Galería 1: 3D MODELING -->
   <main id="gal-3d" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Gallery - 3D Modeling</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+      <span class="window-title font-orbit">Gallery - 3D Modeling</span>
+      <button class="back-btn font-orbit" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
     </div>
     <div class="window-body carousel-container">
       <div class="carousel-track">
@@ -170,8 +170,8 @@
   <!-- Galería 2: ILLUSTRATIONS -->
   <main id="gal-illustrations" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Gallery - Illustrations</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+      <span class="window-title font-orbit">Gallery - Illustrations</span>
+      <button class="back-btn font-orbit" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
     </div>
     <div class="window-body carousel-container">
       <div class="carousel-track">
@@ -204,8 +204,8 @@
   <!-- Galería 3: LOGO DESIGN Y PDFs -->
   <main id="gal-logos" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Gallery - Logo Design</span>
-      <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
+      <span class="window-title font-orbit">Gallery - Logo Design</span>
+      <button class="back-btn font-orbit" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
     </div>
     <div class="window-body">
       <div class="carousel-container" style="margin-bottom: 20px;">
@@ -220,13 +220,13 @@
           <img src="./Atole icono.webp" alt="Logo">
         </div>
       </div>
-      <!-- Sección de Documentos PDF con título Manuales de Branding -->
+      <!-- Sección de Documentos PDF -->
       <div class="pdf-links-container">
-        <h3 style="font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Manuales de Branding</h3>
+        <h3 class="font-orbit" style="font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Manuales de Branding</h3>
         <div class="pdf-buttons">
-          <a href="./Manual corporativo_Ana V. Ramírez Gómez.pdf" target="_blank" class="pdf-btn">Manual corporativo_Ana V. Ramírez Gómez.pdf</a>
-          <a href="./Diseño de imagen_Gaby Marketea.pdf" target="_blank" class="pdf-btn">Diseño de imagen_Gaby Marketea.pdf</a>
-          <a href="./Manual de Identidad_Grupo SIT.pdf" target="_blank" class="pdf-btn">Manual de Identidad_Grupo SIT.pdf</a>
+          <a href="./Manual corporativo_Ana V. Ramírez Gómez.pdf" target="_blank" class="pdf-btn font-orbit">Manual corporativo_Ana V. Ramírez Gómez.pdf</a>
+          <a href="./Diseño de imagen_Gaby Marketea.pdf" target="_blank" class="pdf-btn font-orbit">Diseño de imagen_Gaby Marketea.pdf</a>
+          <a href="./Manual de Identidad_Grupo SIT.pdf" target="_blank" class="pdf-btn font-orbit">Manual de Identidad_Grupo SIT.pdf</a>
         </div>
       </div>
     </div>
