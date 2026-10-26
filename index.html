@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio Retro</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  <!-- Fondo dinámico -->
+  <!-- Fondo dinámico (usa fondo 1.webp por defecto) -->
   <div id="bg-overlay" class="bg-bliss"></div>
 
   <!-- Barra de navegación superior -->
   <nav class="top-nav">
     <div class="nav-btn active" onclick="switchTab('home', 'bg-bliss')">
-      <img src="assets/home-icon.png" alt="Home">
+      <img src="./home.webp" alt="Home">
     </div>
     <div class="nav-btn" onclick="switchTab('user', 'bg-bliss')">
-      <img src="assets/user-icon.png" alt="User">
+      <img src="./user.webp" alt="User">
     </div>
     <div class="nav-btn" onclick="switchTab('folders', 'bg-bliss')">
-      <img src="assets/folder-icon.png" alt="Folders">
+      <img src="./image.webp" alt="Folders">
     </div>
   </nav>
 
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="window-body">
-      <h2>Hola, soy [Tu Nombre]</h2>
+      <h2>Hola, soy Ana Ramírez</h2>
       <p>Soy ilustradora y diseñadora digital enfocada en crear contenido visual único.</p>
     </div>
   </main>
@@ -68,15 +68,15 @@
     </div>
     <div class="window-body folder-grid">
       <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
-        <img src="assets/folder-green.png" alt="Folder">
+        <img src="./image (1).webp" alt="Folder">
         <span>Illustrations</span>
       </div>
       <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
-        <img src="assets/folder-blue.png" alt="Folder">
+        <img src="./image (2).webp" alt="Folder">
         <span>3D Model</span>
       </div>
       <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
-        <img src="assets/folder-yellow.png" alt="Folder">
+        <img src="./image (3).webp" alt="Folder">
         <span>Logo Design</span>
       </div>
     </div>
@@ -89,8 +89,10 @@
       <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
     </div>
     <div class="window-body gallery-grid">
-      <img src="assets/ilustracion1.jpg" alt="Ilustración 1">
-      <img src="assets/ilustracion2.jpg" alt="Ilustración 2">
+      <img src="./Artboard 1.webp" alt="Ilustración 1">
+      <img src="./Artboard 4.webp" alt="Ilustración 2">
+      <img src="./Artboard 6.webp" alt="Ilustración 3">
+      <img src="./flutershy design.webp" alt="Ilustración 4">
     </div>
   </main>
 
@@ -101,7 +103,8 @@
       <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
     </div>
     <div class="window-body gallery-grid">
-      <img src="assets/3d-1.jpg" alt="Modelo 3D 1">
+      <img src="./cal zackk dat.webp" alt="Modelo 3D 1">
+      <img src="./foquita.webp" alt="Modelo 3D 2">
     </div>
   </main>
 
@@ -112,10 +115,11 @@
       <button class="back-btn" onclick="switchTab('folders', 'bg-bliss')">← Volver</button>
     </div>
     <div class="window-body gallery-grid">
-      <img src="assets/logo1.png" alt="Logo 1">
+      <img src="./Logo Principal.webp" alt="Logo 1">
+      <img src="./Agencia de viajes.webp" alt="Logo 2">
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
