@@ -5,31 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ana Victoria Rmż - Portafolio</title>
   <link rel="stylesheet" href="./style.css">
+  <!-- Google Fonts para Orbit, Petit Formal Script y Tahoma -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Petit+Formal+Script&family=Tahoma&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Fondo dinámico -->
+  <!-- Fondo dinámico inicial -->
   <div id="bg-overlay" class="bg-bliss"></div>
 
   <!-- Barra de navegación superior -->
   <nav class="top-nav">
     <div class="nav-btn active" onclick="switchTab('home', 'bg-bliss')">
-      <img src="./home.webp" alt="Home">
+      <img src="./home icon.webp" alt="Home">
     </div>
     <div class="nav-btn" onclick="switchTab('user', 'bg-bliss')">
-      <img src="./user.webp" alt="User">
+      <img src="./user icon.webp" alt="User">
+    </div>
+    <div class="nav-btn" onclick="switchTab('contact', 'bg-bliss')">
+      <img src="./ato parttt.webp" alt="Contact">
     </div>
     <div class="nav-btn" onclick="switchTab('folders', 'bg-bliss')">
-      <img src="./image (4).webp" alt="Folders">
+      <img src="./folder icon.webp" alt="Folders">
     </div>
   </nav>
 
-  <!-- Botón inferior izquierdo (menú de estrella/fruta verde) -->
+  <!-- Botón inferior izquierdo para regresar al explorador -->
   <div class="back-home-icon" onclick="switchTab('folders', 'bg-bliss')" title="Volver a carpetas">
-    <img src="./image.webp" alt="Menu">
+    <img src="./folder icon.webp" alt="Menu">
   </div>
 
-  <!-- Ventana: HOME -->
+  <!-- Ventana: HOME (Estilo Paint / WinXP) -->
   <main id="tab-home" class="window active-window">
     <div class="window-header">
       <span class="window-title">untitled - Paint</span>
@@ -39,24 +44,24 @@
         <button class="win-btn close">✕</button>
       </div>
     </div>
-    <div class="window-body center-text">
-      <h3 style="font-family: monospace; margin-bottom: 10px;">Welcome</h3>
-      <h1 style="font-size: 3rem; font-family: monospace;">My Portfolio</h1>
-      <p style="font-family: monospace; margin-top: 15px; font-weight: bold;">Ana V. Rmż</p>
+    <div class="window-body center-text paint-body">
+      <h3 style="font-family: 'Petit Formal Script', cursive; font-size: 1.8rem; margin-bottom: 10px; color: #333;">Welcome</h3>
+      <h1 style="font-size: 3.5rem; font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color: #111;">My Portfolio</h1>
+      <p style="font-family: 'Tahoma', sans-serif; margin-top: 15px; font-weight: bold; font-size: 1.2rem;">Ana V. Rmż</p>
     </div>
   </main>
 
-  <!-- Ventana: SOBRE MÍ (USER) -->
+  <!-- Ventana: SOBRE MÍ / USER (Estilo Notepad WinXP) -->
   <main id="tab-user" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Portfolio & About me</span>
+      <span class="window-title">About_me.txt - Notepad</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
         <button class="win-btn close">✕</button>
       </div>
     </div>
-    <div class="window-body two-columns">
+    <div class="window-body two-columns notepad-body">
       <div class="col-text">
         <h2>Portfolio</h2>
         <p>Durante la carrera desarrollé habilidades de gestión creativa para proyectos de diseño, ejemplos: pósters publicitarios, motion graphics, desarrollo de marcas y logotipos, ilustración editorial, modelado y texturizado en 3D.</p>
@@ -69,10 +74,41 @@
     </div>
   </main>
 
-  <!-- Ventana: CARPETAS / SECCIONES PRINCIPALES -->
+  <!-- Ventana: CONTACTO (Basada en tu nueva captura) -->
+  <main id="tab-contact" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Contact & Info</span>
+      <div class="window-controls">
+        <button class="win-btn">—</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
+      </div>
+    </div>
+    <div class="window-body contact-body">
+      <div class="upload-section">
+        <span style="font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: #333;">Upload text</span>
+        <div class="upload-box"></div>
+      </div>
+      <div class="contact-card-container">
+        <div class="avatar-container">
+          <img src="./ato parttt.webp" alt="Avatar">
+        </div>
+        <div class="contact-info-box">
+          <div class="contact-btn-title">Contact me:</div>
+          <div class="contact-details">
+            <p>✉ anavramirez1002@gmail.com</p>
+            <p>✉ atoledechokolate512@gmail.com</p>
+            <p>📞 +52 449 152 5083</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Ventana: CARPETAS / EXPLORADOR -->
   <main id="tab-folders" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Explorer</span>
+      <span class="window-title">Explorer - Secciones</span>
       <div class="window-controls">
         <button class="win-btn">—</button>
         <button class="win-btn">▢</button>
@@ -81,16 +117,16 @@
     </div>
     <div class="window-body folder-grid">
       <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
-        <img src="./image (1).webp" alt="Illustrations">
+        <div class="folder-icon-svg">📁</div>
         <span>Illustrations</span>
       </div>
       <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
-        <img src="./image (2).webp" alt="3D Model">
-        <span>3D Model</span>
+        <div class="folder-icon-svg">📂</div>
+        <span>3D Models</span>
       </div>
       <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
-        <img src="./image (3).webp" alt="Logo Design">
-        <span>Logo Design</span>
+        <div class="folder-icon-svg">🗂️</div>
+        <span>Logos & Brand</span>
       </div>
     </div>
   </main>
@@ -98,26 +134,29 @@
   <!-- Galería: ILUSTRACIONES -->
   <main id="gal-illustrations" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Gallery - Illustrations</span>
+      <span class="window-title">Gallery - Illustrations & Editorial</span>
       <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
     </div>
     <div class="window-body carousel-container">
       <div class="carousel-track">
-        <img src="./Artboard 1.webp" alt="Ilustración">
-        <img src="./Artboard 1 copy.webp" alt="Ilustración">
-        <img src="./Artboard 4.webp" alt="Ilustración">
-        <img src="./Artboard 6.webp" alt="Ilustración">
-        <img src="./Artboard 7.webp" alt="Ilustración">
+        <img src="./ato parttt.webp" alt="Ilustración">
+        <img src="./Atole icono.webp" alt="Ilustración">
+        <img src="./Atole tarjeta.webp" alt="Ilustración">
         <img src="./flutershy design.webp" alt="Ilustración">
+        <img src="./gold fish.webp" alt="Ilustración">
+        <img src="./ilustracion para cuento.webp" alt="Ilustración">
         <img src="./pinkie redesign.webp" alt="Ilustración">
-        <img src="./twillight completa.webp" alt="Ilustración">
-        <img src="./your blood cover page.webp" alt="Ilustración">
-        <img src="./ruiii.webp" alt="Ilustración">
+        <img src="./Portada FINAL.webp" alt="Ilustración">
+        <img src="./pose mikuu.webp" alt="Ilustración">
         <img src="./ranita.webp" alt="Ilustración">
+        <img src="./ruiii.webp" alt="Ilustración">
+        <img src="./twillight completa.webp" alt="Ilustración">
+        <img src="./vita-a-a-amin jiji.webp" alt="Ilustración">
+        <img src="./your blood cover page.webp" alt="Ilustración">
         <!-- Duplicadas para carrusel infinito -->
-        <img src="./Artboard 1.webp" alt="Ilustración">
-        <img src="./Artboard 4.webp" alt="Ilustración">
-        <img src="./Artboard 6.webp" alt="Ilustración">
+        <img src="./ato parttt.webp" alt="Ilustración">
+        <img src="./Atole icono.webp" alt="Ilustración">
+        <img src="./Atole tarjeta.webp" alt="Ilustración">
       </div>
     </div>
   </main>
@@ -125,37 +164,58 @@
   <!-- Galería: MODELADO 3D -->
   <main id="gal-3d" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Gallery - 3D Models</span>
+      <span class="window-title">Gallery - 3D Models & Sculptures</span>
       <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
     </div>
     <div class="window-body carousel-container">
       <div class="carousel-track">
         <img src="./cal zackk dat.webp" alt="3D">
-        <img src="./foquita.webp" alt="3D">
-        <img src="./gold fish.webp" alt="3D">
+        <img src="./Esculpido_CU.webp" alt="3D">
+        <img src="./Esculpido_CU_2.webp" alt="3D">
+        <img src="./Esculpido_sin textura.webp" alt="3D">
+        <img src="./turn around_000.webp" alt="3D">
+        <img src="./turn around_006.webp" alt="3D">
+        <img src="./turn around_011.webp" alt="3D">
+        <img src="./turn around_019.webp" alt="3D">
         <img src="./tiburon ballena.webp" alt="3D">
         <img src="./tsukasaaaaa.webp" alt="3D">
+        <img src="./foquita.webp" alt="3D">
         <!-- Duplicadas -->
         <img src="./cal zackk dat.webp" alt="3D">
-        <img src="./foquita.webp" alt="3D">
+        <img src="./Esculpido_CU.webp" alt="3D">
       </div>
     </div>
   </main>
 
-  <!-- Galería: LOGOS -->
+  <!-- Galería: LOGOS Y DOCUMENTOS PDF -->
   <main id="gal-logos" class="window hidden">
     <div class="window-header">
-      <span class="window-title">Gallery - Logo Design</span>
+      <span class="window-title">Gallery - Logos, Apparel & Documents</span>
       <button class="back-btn" onclick="switchTab('folders', 'bg-water')">← Volver</button>
     </div>
-    <div class="window-body carousel-container">
-      <div class="carousel-track">
-        <img src="./Logo Principal.webp" alt="Logo">
-        <img src="./Agencia de viajes.webp" alt="Logo">
-        <img src="./poet_final.webp" alt="Logo">
-        <!-- Duplicadas -->
-        <img src="./Logo Principal.webp" alt="Logo">
-        <img src="./Agencia de viajes.webp" alt="Logo">
+    <div class="window-body">
+      <div class="carousel-container" style="margin-bottom: 20px;">
+        <div class="carousel-track">
+          <img src="./Agencia de viajes.webp" alt="Logo">
+          <img src="./Gaby Marketea.webp" alt="Logo">
+          <img src="./Logo Principal.webp" alt="Logo">
+          <img src="./poet_final.webp" alt="Logo">
+          <img src="./Rowmans shirt back 1.webp" alt="Apparel">
+          <img src="./Rowmanz shirt back 2.webp" alt="Apparel">
+          <img src="./shirt design.webp" alt="Apparel">
+          <!-- Duplicadas -->
+          <img src="./Agencia de viajes.webp" alt="Logo">
+          <img src="./Logo Principal.webp" alt="Logo">
+        </div>
+      </div>
+      <!-- Sección de Documentos PDF solicitados -->
+      <div class="pdf-links-container">
+        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Documentación y Fichas Técnicas (PDF)</h3>
+        <div class="pdf-buttons">
+          <a href="./documento1.pdf" target="_blank" class="pdf-btn">Ficha Técnica 1.pdf</a>
+          <a href="./documento2.pdf" target="_blank" class="pdf-btn">Proyecto Editorial.pdf</a>
+          <a href="./documento3.pdf" target="_blank" class="pdf-btn">Brand Guidelines.pdf</a>
+        </div>
       </div>
     </div>
   </main>
