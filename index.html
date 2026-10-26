@@ -21,11 +21,11 @@
     <div class="nav-btn" onclick="switchTab('user', 'bg-bliss')">
       <img src="./user icon.webp" alt="User">
     </div>
-    <div class="nav-btn" onclick="switchTab('contact', 'bg-bliss')">
-      <img src="./ato parttt.webp" alt="Contact">
-    </div>
     <div class="nav-btn" onclick="switchTab('folders', 'bg-bliss')">
       <img src="./folder icon.webp" alt="Folders">
+    </div>
+    <div class="nav-btn" onclick="switchTab('contact', 'bg-bliss')">
+      <img src="./Mail icon.webp" alt="Contact">
     </div>
   </nav>
 
@@ -74,7 +74,33 @@
     </div>
   </main>
 
-  <!-- Ventana: CONTACTO (Basada en tu nueva captura) -->
+  <!-- Ventana: CARPETAS / EXPLORADOR (Trabajos) -->
+  <main id="tab-folders" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Explorer - Secciones</span>
+      <div class="window-controls">
+        <button class="win-btn">—</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
+      </div>
+    </div>
+    <div class="window-body folder-grid">
+      <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
+        <div class="folder-icon-svg">📁</div>
+        <span>Illustrations</span>
+      </div>
+      <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
+        <div class="folder-icon-svg">📂</div>
+        <span>3D Models</span>
+      </div>
+      <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
+        <div class="folder-icon-svg">🗂️</div>
+        <span>Logos & Brand</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Ventana: CONTACTO (Movida después de los trabajos) -->
   <main id="tab-contact" class="window hidden">
     <div class="window-header">
       <span class="window-title">Contact & Info</span>
@@ -101,32 +127,6 @@
             <p>📞 +52 449 152 5083</p>
           </div>
         </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- Ventana: CARPETAS / EXPLORADOR -->
-  <main id="tab-folders" class="window hidden">
-    <div class="window-header">
-      <span class="window-title">Explorer - Secciones</span>
-      <div class="window-controls">
-        <button class="win-btn">—</button>
-        <button class="win-btn">▢</button>
-        <button class="win-btn close">✕</button>
-      </div>
-    </div>
-    <div class="window-body folder-grid">
-      <div class="folder-card" onclick="openGallery('illustrations', 'bg-water')">
-        <div class="folder-icon-svg">📁</div>
-        <span>Illustrations</span>
-      </div>
-      <div class="folder-card" onclick="openGallery('3d', 'bg-water')">
-        <div class="folder-icon-svg">📂</div>
-        <span>3D Models</span>
-      </div>
-      <div class="folder-card" onclick="openGallery('logos', 'bg-water')">
-        <div class="folder-icon-svg">🗂️</div>
-        <span>Logos & Brand</span>
       </div>
     </div>
   </main>
@@ -208,13 +208,13 @@
           <img src="./Logo Principal.webp" alt="Logo">
         </div>
       </div>
-      <!-- Sección de Documentos PDF solicitados -->
+      <!-- Sección de Documentos PDF -->
       <div class="pdf-links-container">
-        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Documentación y Fichas Técnicas (PDF)</h3>
+        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Documentación Oficial (PDF)</h3>
         <div class="pdf-buttons">
-          <a href="./documento1.pdf" target="_blank" class="pdf-btn">Ficha Técnica 1.pdf</a>
-          <a href="./documento2.pdf" target="_blank" class="pdf-btn">Proyecto Editorial.pdf</a>
-          <a href="./documento3.pdf" target="_blank" class="pdf-btn">Brand Guidelines.pdf</a>
+          <a href="./Manual corporativo_Ana V. Ramírez Gómez.pdf" target="_blank" class="pdf-btn">Manual corporativo_Ana V. Ramírez Gómez.pdf</a>
+          <a href="./Diseño de imagen_Gaby Marketea.pdf" target="_blank" class="pdf-btn">Diseño de imagen_Gaby Marketea.pdf</a>
+          <a href="./Manual de Identidad_Grupo SIT.pdf" target="_blank" class="pdf-btn">Manual de Identidad_Grupo SIT.pdf</a>
         </div>
       </div>
     </div>
