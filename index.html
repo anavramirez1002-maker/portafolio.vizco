@@ -8,12 +8,12 @@
 </head>
 <body>
 
-  <!-- Fondo dinámico inicial con pestaña windows -->
-  <div id="bg-overlay" class="bg-home"></div>
+  <!-- Fondo dinámico inicial limpio -->
+  <div id="bg-overlay" class="bg-bliss"></div>
 
   <!-- Barra de navegación superior -->
   <nav class="top-nav">
-    <div class="nav-btn active" onclick="switchTab('home', 'bg-home')">
+    <div class="nav-btn active" onclick="switchTab('home', 'bg-bliss')">
       <img src="./home icon.webp" alt="Home">
     </div>
     <div class="nav-btn" onclick="switchTab('user', 'bg-bliss')">
@@ -32,7 +32,7 @@
     <img src="./return_3.webp" alt="Menu">
   </div>
 
-  <!-- Ventana: HOME -->
+  <!-- Ventana: HOME (Con Doodles Y2K y tipografías específicas) -->
   <main id="tab-home" class="window active-window">
     <div class="window-header">
       <span class="window-title">untitled - Paint</span>
@@ -43,9 +43,16 @@
       </div>
     </div>
     <div class="window-body center-text paint-body">
-      <h3 style="font-size: 2.2rem; margin-bottom: 10px; color: #222;">Welcome</h3>
-      <h1 style="font-size: 3.5rem; letter-spacing: 2px; color: #111;">My Portfolio</h1>
-      <p style="margin-top: 15px; font-weight: bold; font-size: 1.2rem;">Ana V. Rmż</p>
+      <!-- Doodles decorativos -->
+      <div class="paint-doodles">
+        <span class="doodle d1">✧*̣̩</span>
+        <span class="doodle d2">✿</span>
+        <span class="doodle d3">★</span>
+        <span class="doodle d4">☁︎</span>
+      </div>
+      <h3 class="welcome-pecita" style="font-size: 2.5rem; margin-bottom: 5px; color: #222;">Welcome</h3>
+      <h1 class="title-tahoma" style="font-size: 3rem; letter-spacing: 1px; color: #111;">My Portfolio</h1>
+      <p class="welcome-pecita" style="margin-top: 15px; font-size: 1.5rem; color: #333;">Ana V. Rmż</p>
     </div>
   </main>
 
@@ -61,11 +68,11 @@
     </div>
     <div class="window-body two-columns notepad-body">
       <div class="col-text">
-        <h2>Portfolio</h2>
+        <h2 class="title-tahoma" style="font-size: 1.2rem; margin-bottom: 10px; color: #1e395b;">Portfolio</h2>
         <p>Durante la carrera desarrollé habilidades de gestión creativa para proyectos de diseño, ejemplos: pósters publicitarios, motion graphics, desarrollo de marcas y logotipos, ilustración editorial, modelado y texturizado en 3D.</p>
       </div>
       <div class="col-text" style="border-left: 2px dashed #a0c0e8; padding-left: 20px;">
-        <h2>About me</h2>
+        <h2 class="title-tahoma" style="font-size: 1.2rem; margin-bottom: 10px; color: #1e395b;">About me</h2>
         <p>Mi nombre es Ana Victoria Ramírez Gómez, tengo 20 años. Me gradué del TSU en Diseño Digital.</p>
         <p style="margin-top: 15px;">Me he especializado en Adobe Photoshop, Illustrator, InDesign, After Effects, Autodesk Sketchbook, Affinity y Blender.</p>
       </div>
@@ -110,7 +117,7 @@
     </div>
     <div class="window-body contact-body">
       <div class="upload-section">
-        <span style="font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: #333;">Download CVs</span>
+        <span style="font-size: 0.9rem; color: #333;">Download CVs</span>
         <div class="cv-buttons-row">
           <a href="./CV_Ana V. Ramirez Gomez_EN.pdf" target="_blank" class="cv-btn">📄 CV_Ana V. Ramirez Gomez_EN.pdf</a>
           <a href="./CV_Ana V. Ramirez Gomez_ES.pdf" target="_blank" class="cv-btn">📄 CV_Ana V. Ramirez Gomez_ES.pdf</a>
@@ -194,7 +201,7 @@
     </div>
   </main>
 
-  <!-- Galería 3: LOGO DESIGN Y PDFs (Con título actualizado a Manuales de Branding) -->
+  <!-- Galería 3: LOGO DESIGN Y PDFs -->
   <main id="gal-logos" class="window hidden">
     <div class="window-header">
       <span class="window-title">Gallery - Logo Design</span>
@@ -213,9 +220,9 @@
           <img src="./Atole icono.webp" alt="Logo">
         </div>
       </div>
-      <!-- Sección de Documentos PDF con título Manuales de Branding y sin citas -->
+      <!-- Sección de Documentos PDF con título Manuales de Branding -->
       <div class="pdf-links-container">
-        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Manuales de Branding</h3>
+        <h3 style="font-size: 1rem; color: #1e395b; margin-bottom: 10px;">📄 Manuales de Branding</h3>
         <div class="pdf-buttons">
           <a href="./Manual corporativo_Ana V. Ramírez Gómez.pdf" target="_blank" class="pdf-btn">Manual corporativo_Ana V. Ramírez Gómez.pdf</a>
           <a href="./Diseño de imagen_Gaby Marketea.pdf" target="_blank" class="pdf-btn">Diseño de imagen_Gaby Marketea.pdf</a>
