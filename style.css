@@ -1,3 +1,13 @@
+/* Declaración de tipografía Pecita */
+@font-face {
+  font-family: 'Pecita';
+  src: url('./pecita.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Tahoma&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,6 +37,10 @@ body {
   transition: background-image 0.4s ease;
 }
 
+.bg-home {
+  background-image: url('./pestaña windows.webp');
+}
+
 .bg-bliss {
   background-image: url('./fondo 1.webp');
 }
@@ -35,7 +49,7 @@ body {
   background-image: url('./fondo 2.webp');
 }
 
-/* Barra superior superior */
+/* Barra de navegación superior */
 .top-nav {
   position: fixed;
   top: 15px;
@@ -70,7 +84,7 @@ body {
   transform: scale(1.15);
 }
 
-/* Botón inferior izquierdo */
+/* Botón inferior izquierdo con return_3.webp */
 .back-home-icon {
   position: fixed;
   bottom: 25px;
@@ -93,7 +107,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Estilo general de ventanas WinXP / Retro */
+/* Ventanas Estilo Windows XP */
 .window {
   width: 85%;
   max-width: 820px;
@@ -169,12 +183,28 @@ body {
   gap: 20px;
 }
 
+/* Tipografías aplicadas */
+.paint-body h3 {
+  font-family: 'Pecita', cursive;
+}
+
+.paint-body h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
 .notepad-body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Tahoma', sans-serif;
   background: #fffffe;
 }
 
-/* Estilo para la pestaña de Contacto */
+.notepad-body h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #1e395b;
+}
+
+/* Pestaña de Contacto y CVs */
 .contact-body {
   display: flex;
   flex-direction: column;
@@ -187,17 +217,34 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   width: 100%;
-  max-width: 400px;
+  max-width: 480px;
 }
 
-.upload-box {
+.cv-buttons-row {
+  display: flex;
+  gap: 10px;
   width: 100%;
-  height: 35px;
-  border: 2px dashed #4caf50;
-  background: rgba(76, 175, 80, 0.1);
-  border-radius: 4px;
+}
+
+.cv-btn {
+  flex: 1;
+  background: #e3effd;
+  border: 1px solid #b8d4f8;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  color: #1e395b;
+  font-weight: bold;
+  font-size: 0.75rem;
+  font-family: 'Tahoma', sans-serif;
+  transition: background 0.2s;
+}
+
+.cv-btn:hover {
+  background: #b8d4f8;
 }
 
 .contact-card-container {
@@ -242,15 +289,17 @@ body {
   color: #004d40;
   width: fit-content;
   border: 1px solid #26a69a;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .contact-details p {
   font-size: 0.95rem;
   color: #1a237e;
   font-weight: 600;
+  font-family: 'Tahoma', sans-serif;
 }
 
-/* Carpetas principales con diseño personalizado */
+/* Grid de carpetas */
 .folder-grid {
   display: flex;
   gap: 40px;
@@ -332,7 +381,7 @@ body {
   font-weight: bold;
 }
 
-/* Botones para documentos PDF */
+/* Botones PDF */
 .pdf-links-container {
   margin-top: 15px;
   padding-top: 15px;
@@ -355,6 +404,7 @@ body {
   font-weight: bold;
   font-size: 0.85rem;
   transition: background 0.2s;
+  font-family: 'Tahoma', sans-serif;
 }
 
 .pdf-btn:hover {
