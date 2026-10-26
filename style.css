@@ -21,7 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  font-family: 'Orbitron', sans-serif; /* Resto del texto por defecto en Orbit */
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Fondos dinámicos */
@@ -194,7 +194,7 @@ body {
   font-family: 'Orbitron', sans-serif !important;
 }
 
-/* Doodles decorativos */
+/* Doodles decorativos más grandes y visibles */
 .paint-doodles {
   position: absolute;
   width: 100%;
@@ -207,19 +207,19 @@ body {
 
 .doodle {
   position: absolute;
-  font-size: 1.5rem;
-  opacity: 0.4;
+  font-size: 3.2rem; /* Tamaño incrementado */
+  opacity: 0.55;
   animation: floatDoodle 4s ease-in-out infinite alternate;
 }
 
-.d1 { top: 15px; left: 30px; transform: rotate(-15deg); }
-.d2 { bottom: 20px; right: 40px; transform: rotate(15deg); }
-.d3 { top: 25px; right: 50px; font-size: 1.2rem; }
-.d4 { bottom: 30px; left: 50px; font-size: 1.2rem; }
+.d1 { top: 20px; left: 40px; transform: rotate(-15deg); }
+.d2 { bottom: 25px; right: 50px; transform: rotate(15deg); }
+.d3 { top: 30px; right: 60px; font-size: 2.8rem; }
+.d4 { bottom: 35px; left: 60px; font-size: 2.8rem; }
 
 @keyframes floatDoodle {
   0% { transform: translateY(0px) rotate(0deg); }
-  100% { transform: translateY(-6px) rotate(5deg); }
+  100% { transform: translateY(-8px) rotate(8deg); }
 }
 
 /* Pestaña de Contacto y CVs */
@@ -415,17 +415,4 @@ body {
 
 .pdf-btn {
   background: #e3effd;
-  border: 1px solid #b8d4f8;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #1e395b;
-  font-weight: bold;
-  font-size: 0.85rem;
-  transition: background 0.2s;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.pdf-btn:hover {
-  background: #b8d4f8;
-}
+  border: 1px solid #b
